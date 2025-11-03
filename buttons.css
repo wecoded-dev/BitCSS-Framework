@@ -1,0 +1,728 @@
+/* buttons.css - Enhanced Premium Button Framework */
+/* Version 2.0 - Ultra Premium Royal & Historical */
+
+:root {
+  /* Enhanced Color Palette */
+  --btn-gold: #D4AF37;
+  --btn-gold-dark: #B8860B;
+  --btn-gold-light: #FFD700;
+  --btn-gold-glow: rgba(212, 175, 55, 0.4);
+  
+  --btn-silver: #C0C0C0;
+  --btn-silver-dark: #A9A9A9;
+  --btn-silver-light: #F0F0F0;
+  --btn-silver-glow: rgba(192, 192, 192, 0.4);
+  
+  --btn-bronze: #CD7F32;
+  --btn-bronze-dark: #8B4513;
+  --btn-bronze-light: #DEB887;
+  --btn-bronze-glow: rgba(205, 127, 50, 0.4);
+  
+  /* Enhanced Royal Colors */
+  --btn-royal-blue: #1E3A8A;
+  --btn-royal-purple: #4C1D95;
+  --btn-royal-red: #991B1B;
+  --btn-royal-green: #046307;
+  --btn-burgundy: #800020;
+  --btn-emerald: #047857;
+  --btn-sapphire: #0F52BA;
+  --btn-ruby: #E0115F;
+  
+  /* Premium Neutrals */
+  --btn-ivory: #FFFFF0;
+  --btn-parchment: #F5F5DC;
+  --btn-charcoal: #36454F;
+  --btn-jet-black: #0A0A0A;
+  --btn-velvet: #0F0F0F;
+  
+  /* Enhanced Gradients */
+  --gradient-gold: linear-gradient(135deg, var(--btn-gold-light), var(--btn-gold), var(--btn-gold-dark));
+  --gradient-silver: linear-gradient(135deg, var(--btn-silver-light), var(--btn-silver), var(--btn-silver-dark));
+  --gradient-bronze: linear-gradient(135deg, var(--btn-bronze-light), var(--btn-bronze), var(--btn-bronze-dark));
+  --gradient-royal: linear-gradient(135deg, #667eea, #764ba2, #4C1D95);
+  --gradient-regal: linear-gradient(135deg, var(--btn-royal-purple), var(--btn-burgundy), #5B0F00);
+  --gradient-jewel: linear-gradient(135deg, var(--btn-sapphire), var(--btn-emerald), var(--btn-ruby));
+  
+  /* Enhanced Shadows */
+  --shadow-subtle: 0 2px 8px rgba(0,0,0,0.12);
+  --shadow-medium: 0 4px 16px rgba(0,0,0,0.18);
+  --shadow-strong: 0 8px 32px rgba(0,0,0,0.25);
+  --shadow-gold: 0 4px 20px var(--btn-gold-glow);
+  --shadow-silver: 0 4px 20px var(--btn-silver-glow);
+  --shadow-bronze: 0 4px 20px var(--btn-bronze-glow);
+  --shadow-royal: 0 6px 24px rgba(102, 126, 234, 0.35);
+  
+  /* Typography */
+  --font-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-serif: 'Playfair Display', 'Times New Roman', serif;
+  --font-display: 'Cinzel', 'Georgia', serif;
+  --font-elegant: 'Cormorant Garamond', serif;
+  
+  /* Enhanced Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.25rem;
+  --space-xl: 1.5rem;
+  --space-2xl: 2rem;
+  
+  /* Enhanced Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 50px;
+  --radius-elegant: 12px 12px 4px 4px;
+}
+
+/* Base Button Reset - Enhanced */
+.btn-reset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  outline: none;
+}
+
+/* Enhanced Base Button */
+.btn {
+  padding: var(--space-md) var(--space-xl);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  min-height: 48px;
+  letter-spacing: 0.3px;
+  text-transform: none;
+}
+
+.btn:focus {
+  outline: 3px solid currentColor;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+  filter: grayscale(0.3);
+}
+
+/* Enhanced Button Sizes */
+.btn-xs {
+  padding: var(--space-xs) var(--space-sm);
+  font-size: 0.75rem;
+  min-height: 34px;
+  letter-spacing: 0.2px;
+}
+
+.btn-sm {
+  padding: var(--space-sm) var(--space-md);
+  font-size: 0.8rem;
+  min-height: 40px;
+  letter-spacing: 0.25px;
+}
+
+.btn-lg {
+  padding: var(--space-lg) var(--space-2xl);
+  font-size: 1rem;
+  min-height: 52px;
+  letter-spacing: 0.4px;
+}
+
+.btn-xl {
+  padding: var(--space-xl) 2.5rem;
+  font-size: 1.1rem;
+  min-height: 60px;
+  letter-spacing: 0.5px;
+}
+
+.btn-hero {
+  padding: var(--space-2xl) 3rem;
+  font-size: 1.25rem;
+  min-height: 72px;
+  letter-spacing: 0.6px;
+  font-weight: 700;
+}
+
+/* Enhanced Button Shapes */
+.btn-rounded {
+  border-radius: var(--radius-xl);
+}
+
+.btn-pill {
+  border-radius: var(--radius-full);
+  padding-left: var(--space-2xl);
+  padding-right: var(--space-2xl);
+}
+
+.btn-square {
+  border-radius: var(--radius-sm);
+  aspect-ratio: 1;
+  padding: var(--space-lg);
+  min-height: auto;
+}
+
+.btn-elegant {
+  border-radius: var(--radius-elegant);
+  font-family: var(--font-elegant);
+  font-weight: 500;
+}
+
+/* Premium Royal Buttons - Enhanced */
+.btn-gold {
+  background: var(--gradient-gold);
+  color: #2C1810;
+  border: 2px solid var(--btn-gold-dark);
+  box-shadow: var(--shadow-gold), inset 0 1px 0 rgba(255,255,255,0.4);
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(255,255,255,0.5);
+  position: relative;
+}
+
+.btn-gold::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: left 0.6s ease;
+}
+
+.btn-gold:hover:not(:disabled) {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--shadow-strong), var(--shadow-gold), 0 12px 40px rgba(212, 175, 55, 0.3);
+  background: linear-gradient(135deg, #FFE55C, var(--btn-gold), #C9A227);
+}
+
+.btn-gold:active:not(:disabled) {
+  transform: translateY(-1px) scale(1.01);
+  box-shadow: var(--shadow-medium), inset 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.btn-gold:hover::before {
+  left: 100%;
+}
+
+/* Silver Button - Enhanced */
+.btn-silver {
+  background: var(--gradient-silver);
+  color: #2C1810;
+  border: 2px solid var(--btn-silver-dark);
+  box-shadow: var(--shadow-silver), inset 0 1px 0 rgba(255,255,255,0.5);
+  font-weight: 600;
+  position: relative;
+}
+
+.btn-silver:hover:not(:disabled) {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--shadow-strong), var(--shadow-silver), 0 12px 40px rgba(192, 192, 192, 0.3);
+  background: linear-gradient(135deg, #F8F8F8, var(--btn-silver), #9E9E9E);
+}
+
+/* New Premium Buttons */
+/* Jewel Tone Buttons */
+.btn-sapphire {
+  background: linear-gradient(135deg, var(--btn-sapphire), #1E3A8A, #0D2B5C);
+  color: #FFFFFF;
+  border: 2px solid #0F52BA;
+  box-shadow: 0 6px 20px rgba(15, 82, 186, 0.4);
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.btn-sapphire:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(15, 82, 186, 0.5);
+  background: linear-gradient(135deg, #2D6FDC, var(--btn-sapphire), #0A3D91);
+}
+
+.btn-ruby {
+  background: linear-gradient(135deg, var(--btn-ruby), #B80F4E, #8A0A3A);
+  color: #FFFFFF;
+  border: 2px solid #E0115F;
+  box-shadow: 0 6px 20px rgba(224, 17, 95, 0.4);
+  font-weight: 600;
+}
+
+.btn-ruby:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(224, 17, 95, 0.5);
+  background: linear-gradient(135deg, #FF2D78, var(--btn-ruby), #A50E46);
+}
+
+/* Velvet Button */
+.btn-velvet {
+  background: linear-gradient(135deg, var(--btn-velvet), #2D2D2D, #1A1A1A);
+  color: #FFFFFF;
+  border: 2px solid #444444;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-velvet::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, transparent 30%, rgba(255,255,255,0.03) 50%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn-velvet:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.4);
+  background: linear-gradient(135deg, #363636, var(--btn-velvet), #111111);
+}
+
+.btn-velvet:hover::before {
+  opacity: 1;
+}
+
+/* Enhanced Professional Buttons */
+.btn-executive {
+  background: linear-gradient(135deg, #FFFFFF, #F8FAFC);
+  color: #1F2937;
+  border: 2px solid #E5E7EB;
+  box-shadow: var(--shadow-subtle);
+  font-weight: 500;
+  font-family: var(--font-sans);
+  position: relative;
+}
+
+.btn-executive::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--btn-gold);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.btn-executive:hover:not(:disabled) {
+  background: #FFFFFF;
+  border-color: #D1D5DB;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+  color: #111827;
+}
+
+.btn-executive:hover::after {
+  width: 80%;
+}
+
+/* New Creative Buttons */
+/* 3D Effect Buttons */
+.btn-3d-gold {
+  background: var(--gradient-gold);
+  color: #2C1810;
+  border: none;
+  border-bottom: 4px solid var(--btn-gold-dark);
+  box-shadow: 0 4px 0 #B8860B, 0 6px 8px rgba(0,0,0,0.2);
+  font-weight: 700;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.5);
+  transition: all 0.1s ease;
+}
+
+.btn-3d-gold:hover:not(:disabled) {
+  transform: translateY(2px);
+  border-bottom-width: 2px;
+  box-shadow: 0 2px 0 #B8860B, 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.btn-3d-gold:active:not(:disabled) {
+  transform: translateY(4px);
+  border-bottom-width: 0;
+  box-shadow: 0 0 0 #B8860B, 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Liquid Button */
+.btn-liquid {
+  background: transparent;
+  color: var(--btn-royal-blue);
+  border: 2px solid var(--btn-royal-blue);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-liquid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--btn-royal-blue);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+.btn-liquid:hover:not(:disabled) {
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-royal);
+}
+
+.btn-liquid:hover::before {
+  transform: translateX(0);
+}
+
+/* Enhanced Historical Buttons */
+.btn-manuscript {
+  background: var(--btn-parchment);
+  color: #2C1810;
+  border: 2px solid #C9B18A;
+  box-shadow: var(--shadow-subtle), inset 0 0 20px rgba(139, 69, 19, 0.1);
+  font-family: var(--font-elegant);
+  font-weight: 500;
+  font-style: italic;
+  position: relative;
+}
+
+.btn-manuscript::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  border: 1px solid rgba(139, 69, 19, 0.2);
+  pointer-events: none;
+}
+
+.btn-manuscript:hover:not(:disabled) {
+  background: #EDE7D9;
+  border-color: #B8A27C;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium), inset 0 0 30px rgba(139, 69, 19, 0.15);
+}
+
+/* New Animation Effects */
+/* Bounce Animation */
+.btn-bounce:hover:not(:disabled) {
+  animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+  0%, 20%, 60%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  80% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Jiggle Animation */
+.btn-jiggle:hover:not(:disabled) {
+  animation: jiggle 0.4s ease;
+}
+
+@keyframes jiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-2deg); }
+  75% { transform: rotate(2deg); }
+}
+
+/* Enhanced Loading States */
+.btn-loading {
+  color: transparent !important;
+  pointer-events: none;
+  position: relative;
+}
+
+.btn-loading::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.btn-loading.btn-gold::after {
+  border-top-color: #2C1810;
+  border-right-color: #2C1810;
+}
+
+/* Progress Button */
+.btn-progress {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-progress::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: var(--btn-gold);
+  width: 0%;
+  transition: width 3s ease;
+}
+
+.btn-progress.progressing::after {
+  width: 100%;
+}
+
+/* Enhanced Button Groups */
+.btn-group {
+  display: inline-flex;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-medium);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 4px;
+  gap: 2px;
+}
+
+.btn-group .btn {
+  border-radius: var(--radius-md);
+  border: none;
+  margin: 0;
+  flex: 1;
+  background: transparent;
+  color: inherit;
+}
+
+.btn-group .btn.active {
+  background: var(--gradient-gold);
+  color: #2C1810;
+  box-shadow: var(--shadow-subtle);
+}
+
+/* Floating Action Button */
+.btn-fab {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  padding: 0;
+  min-height: auto;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.btn-fab:hover {
+  transform: scale(1.1) rotate(90deg);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 768px) {
+  .btn {
+    min-height: 52px;
+    padding: var(--space-lg) var(--space-2xl);
+    font-size: 0.95rem;
+  }
+  
+  .btn-lg {
+    padding: var(--space-xl) 2rem;
+    font-size: 1.05rem;
+  }
+  
+  .btn-xl {
+    padding: 1.25rem 1.75rem;
+    font-size: 1.15rem;
+  }
+  
+  .btn-hero {
+    padding: 1.5rem 2rem;
+    font-size: 1.2rem;
+  }
+  
+  .btn-fab {
+    width: 56px;
+    height: 56px;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .btn-group {
+    width: 100%;
+    flex-direction: column;
+    gap: 1px;
+  }
+  
+  .btn-group .btn {
+    border-radius: var(--radius-md);
+    margin-bottom: 0;
+  }
+}
+
+/* Enhanced Print Styles */
+@media print {
+  .btn {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+    border: 2px solid #000000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  
+  .btn::before,
+  .btn::after {
+    display: none !important;
+  }
+}
+
+/* Enhanced Accessibility */
+.btn-high-contrast {
+  background: #000000 !important;
+  color: #FFFFFF !important;
+  border: 3px solid #FFFFFF !important;
+  font-weight: 700;
+}
+
+.btn-high-contrast:hover:not(:disabled) {
+  background: #FFFFFF !important;
+  color: #000000 !important;
+  transform: translateY(-2px);
+}
+
+/* Sound Effects (Visual Feedback) */
+.btn-sound {
+  position: relative;
+}
+
+.btn-sound:active:not(:disabled)::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+  to {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+/* Enhanced Utility Classes */
+.btn-full-width {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-inline {
+  display: inline-flex;
+}
+
+.btn-center {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.btn-no-shadow {
+  box-shadow: none !important;
+}
+
+.btn-flat {
+  box-shadow: none !important;
+  border: 1px solid currentColor !important;
+}
+
+.btn-flat:hover:not(:disabled) {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.btn-glow {
+  filter: drop-shadow(0 0 8px currentColor);
+}
+
+.btn-glow:hover {
+  filter: drop-shadow(0 0 12px currentColor) brightness(1.1);
+}
+
+/* Button Stack for Multiple Buttons */
+.btn-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+.btn-stack .btn {
+  width: 100%;
+  margin: 0;
+}
+
+/* Magnetic Button Effect */
+.btn-magnetic {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.btn-magnetic:hover {
+  transform: translate(var(--mouse-x), var(--mouse-y));
+}

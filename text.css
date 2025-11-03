@@ -1,0 +1,397 @@
+/* text.css - Advanced Professional Typography Framework */
+/* Version 1.0 - Royal & Historical Inspired */
+
+:root {
+  /* Color Palette - Royal & Historical */
+  --text-primary: #2C1810;
+  --text-secondary: #5D4037;
+  --text-accent: #8B4513;
+  --text-gold: #D4AF37;
+  --text-silver: #C0C0C0;
+  --text-bronze: #CD7F32;
+  --text-ivory: #FFFFF0;
+  --text-parchment: #F5F5DC;
+  
+  /* Font Families */
+  --font-serif: 'Playfair Display', 'Times New Roman', serif;
+  --font-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Cinzel', 'Georgia', serif;
+  --font-script: 'Great Vibes', cursive;
+  --font-mono: 'Courier New', monospace;
+  
+  /* Typography Scale */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
+  
+  /* Line Heights */
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
+  --leading-loose: 2;
+  
+  /* Letter Spacing */
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.1em;
+  
+  /* Text Shadows */
+  --shadow-subtle: 0 1px 2px rgba(0,0,0,0.1);
+  --shadow-medium: 0 2px 4px rgba(0,0,0,0.2);
+  --shadow-strong: 0 4px 8px rgba(0,0,0,0.3);
+  --shadow-glow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+/* Base Typography Reset */
+.text-reset {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+/* Font Family Classes */
+.font-serif { font-family: var(--font-serif); }
+.font-sans { font-family: var(--font-sans); }
+.font-display { font-family: var(--font-display); }
+.font-script { font-family: var(--font-script); }
+.font-mono { font-family: var(--font-mono); }
+
+/* Font Size Classes */
+.text-xs { font-size: var(--text-xs); }
+.text-sm { font-size: var(--text-sm); }
+.text-base { font-size: var(--text-base); }
+.text-lg { font-size: var(--text-lg); }
+.text-xl { font-size: var(--text-xl); }
+.text-2xl { font-size: var(--text-2xl); }
+.text-3xl { font-size: var(--text-3xl); }
+.text-4xl { font-size: var(--text-4xl); }
+.text-5xl { font-size: var(--text-5xl); }
+.text-6xl { font-size: var(--text-6xl); }
+.text-7xl { font-size: var(--text-7xl); }
+
+/* Font Weight Classes */
+.font-thin { font-weight: 100; }
+.font-light { font-weight: 300; }
+.font-normal { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+.font-black { font-weight: 900; }
+
+/* Text Colors */
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-accent { color: var(--text-accent); }
+.text-gold { color: var(--text-gold); }
+.text-silver { color: var(--text-silver); }
+.text-bronze { color: var(--text-bronze); }
+.text-ivory { color: var(--text-ivory); }
+.text-parchment { color: var(--text-parchment); }
+
+/* Text Alignment */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+
+/* Text Transformation */
+.text-uppercase { text-transform: uppercase; }
+.text-lowercase { text-transform: lowercase; }
+.text-capitalize { text-transform: capitalize; }
+.text-normal-case { text-transform: none; }
+
+/* Text Decoration */
+.text-underline { text-decoration: underline; }
+.text-overline { text-decoration: overline; }
+.text-line-through { text-decoration: line-through; }
+.text-no-underline { text-decoration: none; }
+
+/* Letter Spacing */
+.tracking-tight { letter-spacing: var(--tracking-tight); }
+.tracking-normal { letter-spacing: var(--tracking-normal); }
+.tracking-wide { letter-spacing: var(--tracking-wide); }
+.tracking-wider { letter-spacing: var(--tracking-wider); }
+.tracking-widest { letter-spacing: var(--tracking-widest); }
+
+/* Line Height */
+.leading-tight { line-height: var(--leading-tight); }
+.leading-normal { line-height: var(--leading-normal); }
+.leading-relaxed { line-height: var(--leading-relaxed); }
+.leading-loose { line-height: var(--leading-loose); }
+
+/* Text Shadows */
+.text-shadow-subtle { text-shadow: var(--shadow-subtle); }
+.text-shadow-medium { text-shadow: var(--shadow-medium); }
+.text-shadow-strong { text-shadow: var(--shadow-strong); }
+.text-shadow-glow { text-shadow: var(--shadow-glow); }
+.text-shadow-none { text-shadow: none; }
+
+/* Special Text Effects */
+.text-emboss {
+  color: var(--text-primary);
+  text-shadow: 1px 1px 1px rgba(255,255,255,0.5), 
+               -1px -1px 1px rgba(0,0,0,0.1);
+}
+
+.text-deboss {
+  color: var(--text-primary);
+  text-shadow: -1px -1px 1px rgba(255,255,255,0.5), 
+               1px 1px 1px rgba(0,0,0,0.3);
+}
+
+.text-gold-emboss {
+  color: var(--text-gold);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5),
+               -1px -1px 1px rgba(255,255,255,0.1);
+}
+
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-primary);
+  text-stroke: 1px var(--text-primary);
+}
+
+.text-outline-gold {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-gold);
+  text-stroke: 1px var(--text-gold);
+}
+
+/* Historical & Royal Styles */
+.text-royal {
+  font-family: var(--font-display);
+  color: var(--text-gold);
+  text-shadow: var(--shadow-glow);
+  letter-spacing: var(--tracking-wider);
+  font-weight: 600;
+}
+
+.text-manuscript {
+  font-family: var(--font-script);
+  color: var(--text-primary);
+  background: linear-gradient(var(--text-parchment), var(--text-ivory));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-ancient {
+  font-family: var(--font-serif);
+  color: var(--text-bronze);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  font-style: italic;
+}
+
+.text-illuminated {
+  font-family: var(--font-display);
+  color: var(--text-gold);
+  background: linear-gradient(45deg, var(--text-gold), var(--text-silver));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+/* Professional Styles */
+.text-professional {
+  font-family: var(--font-sans);
+  color: var(--text-primary);
+  letter-spacing: var(--tracking-normal);
+  line-height: var(--leading-normal);
+  font-weight: 400;
+}
+
+.text-executive {
+  font-family: var(--font-serif);
+  color: var(--text-primary);
+  font-weight: 500;
+  letter-spacing: var(--tracking-tight);
+}
+
+.text-minimal {
+  font-family: var(--font-sans);
+  color: var(--text-primary);
+  font-weight: 300;
+  letter-spacing: var(--tracking-wide);
+}
+
+/* Modern Styles */
+.text-modern {
+  font-family: var(--font-sans);
+  color: var(--text-primary);
+  font-weight: 400;
+  letter-spacing: var(--tracking-normal);
+  text-transform: uppercase;
+}
+
+.text-futuristic {
+  font-family: var(--font-mono);
+  color: var(--text-silver);
+  text-shadow: 0 0 5px rgba(192, 192, 192, 0.5);
+  letter-spacing: var(--tracking-wide);
+}
+
+/* Gradient Text Effects */
+.text-gradient-primary {
+  background: linear-gradient(135deg, var(--text-primary), var(--text-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-royal {
+  background: linear-gradient(135deg, var(--text-gold), var(--text-bronze));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-silver {
+  background: linear-gradient(135deg, var(--text-silver), #888888);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hover Effects */
+.text-hover-glow:hover {
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  transition: text-shadow 0.3s ease;
+}
+
+.text-hover-scale:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.text-hover-color:hover {
+  color: var(--text-gold);
+  transition: color 0.3s ease;
+}
+
+/* Animation Classes */
+.text-fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+.text-slide-in {
+  animation: slideIn 0.8s ease-out;
+}
+
+.text-typewriter {
+  overflow: hidden;
+  border-right: 2px solid var(--text-gold);
+  white-space: nowrap;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { 
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to { 
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--text-gold) }
+}
+
+/* Responsive Text Classes */
+@media (max-width: 768px) {
+  .text-responsive {
+    font-size: calc(1rem + 0.5vw);
+    line-height: var(--leading-relaxed);
+  }
+  
+  .text-mobile-center {
+    text-align: center;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .text-print {
+    color: #000 !important;
+    text-shadow: none !important;
+    font-family: "Times New Roman", serif !important;
+  }
+}
+
+/* Accessibility */
+.text-high-contrast {
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+.text-large-print {
+  font-size: 1.25rem;
+  line-height: var(--leading-relaxed);
+}
+
+/* Utility Classes */
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-break {
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.text-pre {
+  white-space: pre;
+}
+
+.text-pre-line {
+  white-space: pre-line;
+}
+
+.text-pre-wrap {
+  white-space: pre-wrap;
+}
+
+/* Selection Styles */
+::selection {
+  background-color: var(--text-gold);
+  color: var(--text-primary);
+}
+
+::-moz-selection {
+  background-color: var(--text-gold);
+  color: var(--text-primary);
+}

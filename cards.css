@@ -1,0 +1,582 @@
+/* cards.css - Advanced Professional Card Framework */
+/* Version 1.0 - Royal & Historical Inspired */
+
+:root {
+  /* Color Palette - Royal & Historical */
+  --card-bg-primary: #FFFFFF;
+  --card-bg-secondary: #F8F9FA;
+  --card-bg-dark: #2C1810;
+  --card-bg-parchment: #F5F5DC;
+  --card-bg-ivory: #FFFFF0;
+  --card-bg-gold: linear-gradient(135deg, #D4AF37, #FFD700);
+  --card-bg-silver: linear-gradient(135deg, #C0C0C0, #E8E8E8);
+  --card-bg-bronze: linear-gradient(135deg, #CD7F32, #B08D57);
+  
+  /* Accent Colors */
+  --accent-gold: #D4AF37;
+  --accent-silver: #C0C0C0;
+  --accent-bronze: #CD7F32;
+  --accent-royal-blue: #1E3A8A;
+  --accent-burgundy: #800020;
+  --accent-emerald: #046307;
+  
+  /* Border & Shadow */
+  --border-gold: 2px solid var(--accent-gold);
+  --border-silver: 2px solid var(--accent-silver);
+  --border-antique: 1px solid #8B4513;
+  --shadow-subtle: 0 2px 8px rgba(0,0,0,0.1);
+  --shadow-medium: 0 4px 16px rgba(0,0,0,0.15);
+  --shadow-royal: 0 8px 32px rgba(212, 175, 55, 0.2);
+  --shadow-emboss: inset 0 1px 2px rgba(255,255,255,0.5),
+                  inset 0 -1px 2px rgba(0,0,0,0.1);
+  
+  /* Typography */
+  --font-serif: 'Playfair Display', 'Times New Roman', serif;
+  --font-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Cinzel', 'Georgia', serif;
+  --font-script: 'Great Vibes', cursive;
+  
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+}
+
+/* Base Card Reset */
+.card-reset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* Card Container Base */
+.card {
+  position: relative;
+  background: var(--card-bg-primary);
+  border-radius: 12px;
+  box-shadow: var(--shadow-subtle);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  font-family: var(--font-sans);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-medium);
+}
+
+/* Card Layout Variants */
+.card-horizontal {
+  display: flex;
+  flex-direction: row;
+  min-height: 200px;
+}
+
+.card-vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+/* Card Background Variants */
+.card-royal {
+  background: var(--card-bg-gold);
+  color: #2C1810;
+  border: var(--border-gold);
+}
+
+.card-silver {
+  background: var(--card-bg-silver);
+  color: #2C1810;
+  border: var(--border-silver);
+}
+
+.card-bronze {
+  background: var(--card-bg-bronze);
+  color: #FFFFFF;
+}
+
+.card-parchment {
+  background: var(--card-bg-parchment);
+  color: #2C1810;
+  border: var(--border-antique);
+  position: relative;
+}
+
+.card-parchment::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="1" stitchTiles="stitch"/></filter><rect width="100" height="100" filter="url(%23noise)" opacity="0.1"/></svg>');
+  pointer-events: none;
+}
+
+.card-ivory {
+  background: var(--card-bg-ivory);
+  color: #2C1810;
+  border: 1px solid #E8DCCA;
+}
+
+.card-dark {
+  background: var(--card-bg-dark);
+  color: #FFFFFF;
+}
+
+/* Card Header */
+.card-header {
+  padding: var(--space-md);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  background: inherit;
+}
+
+.card-royal .card-header,
+.card-silver .card-header,
+.card-bronze .card-header {
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.card-header h1,
+.card-header h2,
+.card-header h3,
+.card-header h4,
+.card-header h5,
+.card-header h6 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+/* Card Body */
+.card-body {
+  padding: var(--space-md);
+  flex: 1;
+}
+
+.card-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Card Footer */
+.card-footer {
+  padding: var(--space-md);
+  border-top: 1px solid rgba(0,0,0,0.1);
+  background: inherit;
+}
+
+.card-royal .card-footer,
+.card-silver .card-footer,
+.card-bronze .card-footer {
+  border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Card Image */
+.card-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-img-top {
+  border-radius: 12px 12px 0 0;
+}
+
+.card-img-left {
+  width: 40%;
+  border-radius: 12px 0 0 12px;
+}
+
+.card-img-right {
+  width: 40%;
+  border-radius: 0 12px 12px 0;
+}
+
+/* Card Badges */
+.card-badge {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  background: var(--accent-gold);
+  color: #2C1810;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 10;
+}
+
+.card-badge-royal {
+  background: var(--accent-gold);
+  color: #2C1810;
+}
+
+.card-badge-silver {
+  background: var(--accent-silver);
+  color: #2C1810;
+}
+
+.card-badge-bronze {
+  background: var(--accent-bronze);
+  color: #FFFFFF;
+}
+
+.card-badge-burgundy {
+  background: var(--accent-burgundy);
+  color: #FFFFFF;
+}
+
+.card-badge-emerald {
+  background: var(--accent-emerald);
+  color: #FFFFFF;
+}
+
+/* Special Card Types */
+/* Royal Crest Card */
+.card-crest {
+  position: relative;
+  background: linear-gradient(135deg, #1E3A8A, #800020);
+  color: #FFFFFF;
+  text-align: center;
+  padding: var(--space-xl);
+}
+
+.card-crest::before {
+  content: '♔';
+  font-size: 4rem;
+  color: var(--accent-gold);
+  display: block;
+  margin-bottom: var(--space-md);
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+}
+
+/* Historical Manuscript Card */
+.card-manuscript {
+  background: var(--card-bg-parchment);
+  border: var(--border-antique);
+  font-family: var(--font-serif);
+  position: relative;
+  padding: var(--space-lg);
+}
+
+.card-manuscript::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 1px solid #8B4513;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Professional Business Card */
+.card-business {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  box-shadow: var(--shadow-medium);
+  font-family: var(--font-sans);
+}
+
+.card-business .card-header {
+  background: linear-gradient(135deg, var(--accent-royal-blue), #3730A3);
+  color: #FFFFFF;
+}
+
+/* Elegant Profile Card */
+.card-profile {
+  text-align: center;
+  padding: var(--space-xl);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #FFFFFF;
+}
+
+.card-profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid rgba(255,255,255,0.3);
+  margin: 0 auto var(--space-md);
+  object-fit: cover;
+}
+
+/* Statistical Card */
+.card-stats {
+  text-align: center;
+  padding: var(--space-lg);
+  background: #FFFFFF;
+  border-left: 4px solid var(--accent-gold);
+}
+
+.card-stats-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin-bottom: var(--space-xs);
+}
+
+.card-stats-label {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #6B7280;
+}
+
+/* Product Card */
+.card-product {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-product-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  color: #FFFFFF;
+  padding: var(--space-lg);
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.card-product:hover .card-product-overlay {
+  transform: translateY(0);
+}
+
+/* Testimonial Card */
+.card-testimonial {
+  background: #FFFFFF;
+  border-left: 4px solid var(--accent-gold);
+  position: relative;
+  padding: var(--space-lg);
+}
+
+.card-testimonial::before {
+  content: '"';
+  font-size: 4rem;
+  color: var(--accent-gold);
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  opacity: 0.3;
+  font-family: var(--font-serif);
+}
+
+.card-testimonial-quote {
+  font-style: italic;
+  margin-bottom: var(--space-md);
+  position: relative;
+  z-index: 2;
+}
+
+.card-testimonial-author {
+  font-weight: 600;
+  color: var(--accent-royal-blue);
+}
+
+/* Pricing Card */
+.card-pricing {
+  text-align: center;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.card-pricing-featured {
+  border-color: var(--accent-gold);
+  transform: scale(1.05);
+  box-shadow: var(--shadow-royal);
+}
+
+.card-pricing-price {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin: var(--space-md) 0;
+}
+
+.card-pricing-period {
+  font-size: 1rem;
+  color: #6B7280;
+}
+
+.card-pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-lg) 0;
+}
+
+.card-pricing-features li {
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.card-pricing-features li:last-child {
+  border-bottom: none;
+}
+
+/* Interactive Card Elements */
+.card-hover-3d {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.card-hover-3d:hover {
+  transform: rotateY(10deg) rotateX(5deg);
+}
+
+.card-flip {
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-flip:hover {
+  transform: rotateY(180deg);
+}
+
+.card-flip-front,
+.card-flip-back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.card-flip-back {
+  transform: rotateY(180deg);
+}
+
+/* Card Grid System */
+.cards-grid {
+  display: grid;
+  gap: var(--space-lg);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.cards-grid-compact {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-md);
+}
+
+.cards-grid-featured {
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+/* Card Animations */
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.card-animate-fade {
+  animation: cardFadeIn 0.6s ease-out;
+}
+
+.card-animate-slide {
+  animation: cardSlideIn 0.6s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card-horizontal {
+    flex-direction: column;
+  }
+  
+  .card-img-left,
+  .card-img-right {
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+  }
+  
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .card-pricing-featured {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    margin: 0 var(--space-xs);
+  }
+  
+  .card-body,
+  .card-header,
+  .card-footer {
+    padding: var(--space-sm);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .card {
+    box-shadow: none;
+    border: 1px solid #000000;
+  }
+  
+  .card-royal,
+  .card-silver,
+  .card-bronze {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+    border: 1px solid #000000 !important;
+  }
+}
+
+/* Utility Classes */
+.card-shadow-none { box-shadow: none; }
+.card-shadow-royal { box-shadow: var(--shadow-royal); }
+.card-border-none { border: none; }
+.card-rounded-sm { border-radius: 6px; }
+.card-rounded-lg { border-radius: 16px; }
+.card-rounded-full { border-radius: 50px; }
+
+.card-overflow-visible { overflow: visible; }
+.card-overflow-hidden { overflow: hidden; }
+
+/* Accessibility */
+.card-high-contrast {
+  background: #000000;
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+}
+
+.card-high-contrast .card-header,
+.card-high-contrast .card-footer {
+  border-color: #FFFFFF;
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Forms.css Demo</title>
+    <link href="forms.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Premium Form Section -->
+    <div class="form-section form-section-royal form-animate">
+        <div class="form-section-header">
+            <h2 class="form-section-title">Royal Application Form</h2>
+        </div>
+        
+        <form class="form-stacked form-stagger">
+            <!-- Floating Label Input -->
+            <div class="form-floating form-floating-royal">
+                <input type="text" class="form-input form-input-royal" id="fullName" placeholder=" " required>
+                <label for="fullName" class="form-label">Full Name</label>
+            </div>
+
+            <!-- Animated Input with Glow -->
+            <div class="form-group">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-input form-input-glow" id="email" required>
+            </div>
+
+            <!-- Royal Select -->
+            <div class="form-group">
+                <label for="title" class="form-label">Royal Title</label>
+                <select class="form-input form-select form-select-royal" id="title">
+                    <option>Select Title</option>
+                    <option>Duke/Duchess</option>
+                    <option>Count/Countess</option>
+                    <option>Baron/Baroness</option>
+                </select>
+            </div>
+
+            <!-- Enhanced Textarea -->
+            <div class="form-group">
+                <label for="message" class="form-label">Royal Proclamation</label>
+                <textarea class="form-input form-textarea form-textarea-royal" id="message" rows="4" placeholder="State your proclamation..."></textarea>
+                <div class="form-char-counter">0/500</div>
+            </div>
+
+            <!-- Checkbox Group -->
+            <div class="form-group">
+                <label class="form-label">Royal Privileges</label>
+                <div class="form-check form-check-royal">
+                    <input type="checkbox" class="form-check-input" id="privilege1">
+                    <label for="privilege1" class="form-check-label">Castle Access</label>
+                </div>
+                <div class="form-check form-check-royal">
+                    <input type="checkbox" class="form-check-input" id="privilege2">
+                    <label for="privilege2" class="form-check-label">Royal Gardens</label>
+                </div>
+            </div>
+
+            <!-- Radio Group -->
+            <div class="form-group">
+                <label class="form-label">Succession Line</label>
+                <div class="form-radio">
+                    <input type="radio" class="form-radio-input" name="succession" id="direct">
+                    <label for="direct" class="form-radio-label">Direct Line</label>
+                </div>
+                <div class="form-radio">
+                    <input type="radio" class="form-radio-input" name="succession" id="collateral">
+                    <label for="collateral" class="form-radio-label">Collateral Line</label>
+                </div>
+            </div>
+
+            <!-- Range Slider -->
+            <div class="form-group">
+                <label for="nobility" class="form-label">Nobility Score</label>
+                <input type="range" class="form-range form-range-royal" id="nobility" min="0" max="100">
+            </div>
+
+            <!-- File Upload -->
+            <div class="form-group">
+                <label class="form-label">Coat of Arms</label>
+                <div class="form-file">
+                    <input type="file" class="form-file-input" id="coatOfArms" accept="image/*">
+                    <label for="coatOfArms" class="form-file-label">
+                        Upload Coat of Arms
+                    </label>
+                </div>
+            </div>
+
+            <!-- Toggle Switch -->
+            <div class="form-group">
+                <label class="form-switch form-switch-royal">
+                    <input type="checkbox" class="form-switch-input">
+                    <span class="form-switch-slider"></span>
+                    <span class="form-switch-label">Royal Announcement</span>
+                </label>
+            </div>
+
+            <!-- Password with Strength -->
+            <div class="form-group">
+                <label for="password" class="form-label">Royal Seal Password</label>
+                <input type="password" class="form-input" id="password" required>
+                <div class="form-password-strength">
+                    <div class="form-password-strength-bar form-password-weak"></div>
+                </div>
+            </div>
+
+            <!-- Search Input -->
+            <div class="form-group">
+                <label for="search" class="form-label">Search Royal Archives</label>
+                <input type="search" class="form-input form-search" id="search" placeholder="Search...">
+            </div>
+        </form>
+    </div>
+
+    <!-- Modern Form Layout -->
+    <div class="form-section form-animate">
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="firstName" class="form-label">First Name</label>
+                <input type="text" class="form-input form-input-modern" id="firstName">
+            </div>
+            <div class="form-group">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input type="text" class="form-input form-input-modern" id="lastName">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
